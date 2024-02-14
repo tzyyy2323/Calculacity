@@ -1,7 +1,6 @@
 # Calculacity
 
-Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro tutor guía el profesor Ruben Leal, se trata de una calculadora y enciclopedia inteligente en donde se podrán calcular las operaciones fundamentales de la matemática y una serie de fórmulas para ayudar al aprendizaje de los estudiantes y docentes, además de un formulario y un glosario para un correcto estudio de la materia.
-
+Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro tutor guía el profesor Ruben Leal.
 ## Changelog
 
 **Version 1.0**

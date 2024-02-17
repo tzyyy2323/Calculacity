@@ -163,13 +163,116 @@ def calcular_area_circulo(radio):
     area = math.pi * radio**2
     return area
 
+def longitud_converter(valor, unidad_origen, unidad_destino):
+    # Se definen las relaciones de conversión
+    relaciones = {
+        'milimetro': 1000,
+        'centimetro': 100,
+        'decimetro': 10,
+        'metro': 1,
+        'decametro': 0.1,
+        'hectometro': 0.01,
+        'kilometro': 0.001,
+    }
+    
+    try:
+        # Convertir el valor a metros (unidad base)
+        
+        valor_en_metros = valor * relaciones[unidad_origen]
+
+        # Convertir de metros a la unidad destino mayor de la unidad
+        
+        valor_convertido_mayor = valor_en_metros / relaciones[unidad_destino]
+
+        # Convertir de metros a la unidad destino menor de la unidad
+
+        valor_convertido_menor = valor_en_metros * relaciones[unidad_destino]
+
+        return valor_convertido_menor
+
+    except KeyError:
+        return "Unidad no reconocida. Por favor, elige entre las que se indicaron previamente."
+    
+
+
+    
+    
+
+
+def tiempo_converter(valor_tiempo, unidad_origen_tiempo, unidad_destino_tiempo):
+    relaciones = {
+        'hora': 1,
+        'minuto': 60,
+        'segundo': 3600
+    }
+
+    try:
+
+        valor_en_segundos = valor_tiempo * relaciones[unidad_origen_tiempo]
+        valor_convertido_tiempo = valor_en_segundos / relaciones[unidad_destino_tiempo]
+
+        return valor_convertido_tiempo
+    
+    except KeyError:
+        return "Unidad no reconocida. Por favor, elige entre las que se indicaron previamente."
+    
+
+def masa_converter(valor_masa, unidad_origen_masa, unidad_destino_masa):
+    
+    relaciones = {
+        'miligramo': 1000,
+        'centigramo': 100,
+        'decigramo': 10,
+        'gramo': 1,
+        'decagramo': 0.1,
+        'hectogramo': 0.01,
+        'kilogramo': 0.001,
+    }
+
+    try:
+
+        valor_en_gramo = valor_masa * relaciones[unidad_origen_masa]
+        valor_convertido_mayor_masa = valor_en_gramo / relaciones[unidad_destino_masa]
+        valor_convertido_menor_masa = valor_en_gramo * relaciones[unidad_destino_masa]
+
+        return valor_convertido_menor_masa
+    
+    except KeyError:
+        return "Unidad no reconocida. Por favor, elige entre las que se indicaron previamente'."
+    
+
+def volumen_converter(valor_volumen, unidad_origen_volumen, unidad_destino_volumen):
+    
+    relaciones = {
+        'mililitro': 1000,
+        'centilitro': 100,
+        'decilitro': 10,
+        'litro': 1,
+        'decalitro': 0.1,
+        'hectolitro': 0.01,
+        'kilolitro': 0.001,
+    }
+
+    try:
+
+        valor_en_litro = valor_volumen * relaciones[unidad_origen_volumen]
+        valor_convertido_mayor_volumen = valor_en_litro / relaciones[unidad_destino_volumen]
+        valor_convertido_menor_volumen = valor_en_litro * relaciones[unidad_destino_volumen]
+
+        return valor_convertido_menor_volumen
+    
+    
+    except KeyError:
+        return "Unidad no reconocida. Por favor, elige entre las que se indicaron previamente'."
+
+
 if __name__ == "__main__":
     print("")
-    print("Calculacity 1.1")
+    print("Calculacity 1.2")
     print("")
     
     eleccion = 0
-    while eleccion != 10:
+    while eleccion != 12:
         
         print("*" * 80)
 
@@ -185,8 +288,9 @@ if __name__ == "__main__":
         7- Calcular fórmula para resolver ecuaciones cuadráticas
         8- Calcular teorema de Pitágoras
         9- Calcular el área de figuras
-       10- Formulario
-       11- Créditos
+       10- Conversor de unidades
+       11- Formulario
+       12- Créditos
         """)
 
         print("*" * 80)
@@ -331,8 +435,84 @@ if __name__ == "__main__":
                 otra_operacion = input("¿Desea realizar otra operación para calcular áreas? (Sí/No): ").lower()
                 if otra_operacion != 'si':
                     break
-        
+
         elif eleccion == 10:
+            while True:
+                
+                print("Conversión de unidades")
+
+                medicion = input("Ingrese el tipo de unidad que necesita convertir (metro, litro, gramo, tiempo)")
+
+                if medicion == "metro":
+
+                    valor_ingresado = float(input("Ingresa la longitud: "))
+                    unidad_origen = input("Ingresa la unidad de origen (milimetro, centimetro, decimetro, metro, decametro, hectometro, kilometro:").lower()
+                    unidad_destino = input("Ingresa la unidad de destino (milimetro, centimetro, decimetro, metro, decametro, hectometro, kilometro:").lower()
+
+                    resultado = longitud_converter(valor_ingresado, unidad_origen, unidad_destino)
+
+                    if type(resultado) == float:
+                        print(f"{valor_ingresado} {unidad_origen} es igual a {resultado} {unidad_destino}.")
+                    else:
+                        print(resultado)
+                    
+                    otra_operacion = input("¿Desea realizar otra conversión? (Si/No)").lower()
+                    if otra_operacion != 'si':
+                        break
+
+                elif medicion == "litro":
+
+                    valor_ingresado_volumen = float(input("Ingresa la capacidad: "))
+                    unidad_origen_volumen = input("Ingresa la unidad de origen (mililitro, centilitro, decilitro, litro, decalitro, hectolitro, kilolitro):").lower()
+                    unidad_destino_volumen = input("Ingresa la unidad de destino (mililitro, centilitro, decilitro, litro, decalitro, hectolitro, kilolitro:").lower()
+
+                    resultado = volumen_converter(valor_ingresado_volumen, unidad_origen_volumen, unidad_destino_volumen)
+
+                    if type(resultado) == float:
+                        print(f"{valor_ingresado_volumen} {unidad_origen_volumen} es igual a {resultado} {unidad_destino_volumen}.")
+                    else:
+                        print(resultado)
+                    
+                    otra_operacion = input("¿Desea realizar otra conversión? (Si/No)").lower()
+                    if otra_operacion != 'si':
+                        break
+                
+                elif medicion == "gramo":
+
+                    valor_ingresado = float(input("Ingresa la masa: "))
+                    unidad_origen_masa = input("Ingresa la unidad de origen (miligramo, centigramo, decigramo, gramo, decagramo, hectogramo, kilogramo:").lower()
+                    unidad_destino_masa = input("Ingresa la unidad de destino (miligramo, centigramo, decigramo, gramo, decagramo, hectogramo, kilogramo:").lower()
+
+                    resultado = masa_converter(valor_ingresado, unidad_origen_masa, unidad_destino_masa)
+
+                    if type(resultado) == float:
+                        print(f"{valor_ingresado} {unidad_origen_masa} es igual a {resultado} {unidad_destino_masa}.")
+                    else:
+                        print(resultado)
+                    
+                    otra_operacion = input("¿Desea realizar otra conversión? (Si/No)").lower()
+                    if otra_operacion != 'si':
+                        break
+
+                elif medicion == "tiempo":
+
+                    valor_ingresado = float(input("Ingresa el tiempo: "))
+                    unidad_origen = input("Ingresa la unidad de origen (hora, minuto, segundo): ").lower()
+                    unidad_destino = input("Ingresa la unidad de destino (hora, minuto, segundo): ").lower()
+
+                    resultado = tiempo_converter(valor_ingresado, unidad_origen, unidad_destino)
+
+                    if type(resultado) == float:
+                        print(f"{valor_ingresado} {unidad_origen} es igual a {resultado} {unidad_destino}.")
+                    else:
+                        print(resultado)
+                    
+                    otra_operacion = input("¿Desea realizar otra conversión? (Si/No)").lower()
+                    if otra_operacion != 'si':
+                        break
+
+
+        elif eleccion == 11:
                 
             while True:
             
@@ -509,7 +689,7 @@ if __name__ == "__main__":
                 elif opcion_principal == "8":
                     sys.exit()
             
-        elif eleccion == 11:
+        elif eleccion == 12:
             
             print("*" * 80)
             print("")

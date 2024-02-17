@@ -511,6 +511,8 @@ if __name__ == "__main__":
             print("")
             print("Programa creado por los estudiantes Siugel Chong y Luis Diego Salas")
             print("")
+            print("El profesor Ruben Leal como nuestro tutor guía para el proyecto")
+            print("")
             print("Unidad Psicoeducativa Julio Chevalier")
             print("")
             print("Reto de matemáticas 2024")

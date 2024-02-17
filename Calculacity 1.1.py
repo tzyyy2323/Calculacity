@@ -165,7 +165,7 @@ def calcular_area_circulo(radio):
 
 if __name__ == "__main__":
     print("")
-    print("Calculacity 1.0")
+    print("Calculacity 1.1")
     print("")
     
     eleccion = 0

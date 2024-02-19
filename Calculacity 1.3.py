@@ -2,7 +2,7 @@ import time
 import sys
 import math 
 import numpy as np
-import tkinter
+from tkinter import *
 from math import sqrt
 from sympy import symbols, lambdify
 import matplotlib.pyplot as plt

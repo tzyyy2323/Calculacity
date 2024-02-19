@@ -17,3 +17,7 @@ Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro tutor g
 **Version 1.2**
 
 - Se añadió el conversor de unidades, pudiendo convertir unidades de longitud, masa, capacidad y tiempo.
+
+**Versión 1.3**
+
+- Se añadió la capacidad de representar funciones en el plano cartesiano

@@ -737,7 +737,7 @@ if __name__ == "__main__":
             print("")
             print("Programa creado por los estudiantes Siugel Chong y Luis Diego Salas")
             print("")
-            print("Nuestro tutor guía el profesor Ruben Leal")
+            print("El profesor Ruben Leal como nuestro tutor guía")
             print("")
             print("Unidad Psicoeducativa Julio Chevalier")
             print("")

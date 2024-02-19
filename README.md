@@ -5,11 +5,15 @@ Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro tutor g
 
 **Version 1.0**
 
-- Primera versión del programa
-- Se agregaron las opciones para calcular suma, resta, multiplicación, división, raíz cuadrada, porcentaje, fórmula para ecuación cuadrática, teorema de pitágoras, área de figuras y un pequeño formulario
+- Primera versión del programa.
+- Se agregaron las opciones para calcular suma, resta, multiplicación, división, raíz cuadrada, porcentaje, fórmula para ecuación cuadrática, teorema de pitágoras, área de figuras y un pequeño formulario.
 
 **Version 1.1**
 
 - Se le cambió el nombre oficialmente a Calculacity
-- Ahora al dibujar en formato ASCII la fórmula para ecuaciones cuadráticas se podrán ver los números que se introdujeron en las variables A, B y C
-- En los resultados de la fórmula para calcular ecuaciones cuadráticas aparecerá 1 decimal
+- Ahora al dibujar en formato ASCII la fórmula para ecuaciones cuadráticas se podrán ver los números que se introdujeron en las variables A, B y C.
+- En los resultados de la fórmula para calcular ecuaciones cuadráticas aparecerá 1 decimal.
+
+**Version 1.2**
+
+- Se añadió el conversor de unidades, pudiendo convertir unidades de longitud, masa, capacidad y tiempo.

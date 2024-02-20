@@ -516,45 +516,63 @@ if __name__ == "__main__":
                         break
         
         elif eleccion == 11:
-                        # Pedir al usuario que ingrese la función
+            def guardar_grafica(expresion_funcion, valores_x, valores_y):
+                # Crear la función a partir de la expresión ingresada
+                try:
+                    funcion = lambdify(x, expresion_funcion, 'numpy')
+                except Exception as e:
+                    print(f"Error al crear la función: {e}")
+                    return
+            
+                # Limpiar la figura antes de dibujar una nueva gráfica
+                plt.clf()
+            
+                # Dibujar el plano cartesiano con la función
+                plt.title('Plano Cartesiano con Función')
+                plt.xlabel('Eje X')
+                plt.ylabel('Eje Y')
+            
+                # Dibujar los ejes X e Y (la cruz)
+                plt.axhline(0, color='black', linewidth=2, linestyle='--')
+                plt.axvline(0, color='black', linewidth=2, linestyle='--')
+            
+                # Mostrar la función
+                plt.plot(valores_x, valores_y, color='blue', marker='o', label=f'Función: {expresion_funcion}')
+            
+                # Mostrar los puntos en el plano
+                plt.scatter(valores_x, valores_y, color='red', marker='o', label='Puntos de la función')
+            
+                # Mostrar el gráfico
+                plt.grid(True)
+                plt.legend()
+            
+                # Obtener la ruta del directorio "Mis Documentos"
+                directorio_documentos = os.path.join(os.path.expanduser("~"), "Documents")
+            
+                # Generar un nombre único para el archivo .png
+                nombre_archivo = f'grafica_{expresion_funcion.replace(" ", "_").replace("/", "_").replace("*", "_")}.png'
+                archivo_salida = os.path.join(directorio_documentos, nombre_archivo)
+            
+                # Guardar la gráfica en el archivo .png
+                plt.savefig(archivo_salida)
+            
+                # Mostrar un mensaje de confirmación
+                print(f"La gráfica se ha guardado en {archivo_salida}")
+            
+            # Pedir al usuario que ingrese la función
             x = symbols('x')
             expresion_funcion = input("Ingresa la expresión de la función en términos de x: ")
-
-            # Crear la función a partir de la expresión ingresada
-            try:
-                funcion = lambdify(x, expresion_funcion, 'numpy')
-            except Exception as e:
-                print(f"Error al crear la función: {e}")
-                exit()
-
+            
             # Valores de x de la tabla
             valores_x = [-3, -2, -1, 0, 1, 2, 3]
-
+            
             # Calcular los valores correspondientes de y utilizando la función ingresada
-            valores_y = [funcion(valor_x) for valor_x in valores_x]
-
-            # Dibujar el plano cartesiano con la función
-            plt.title('Plano Cartesiano con Función')
-            plt.xlabel('Eje X')
-            plt.ylabel('Eje Y')
-
-            # Dibujar los ejes X e Y (la cruz)
-            plt.axhline(0, color='black', linewidth=2, linestyle='--')
-            plt.axvline(0, color='black', linewidth=2, linestyle='--')
-
-            # Mostrar la función
-            plt.plot(valores_x, valores_y, color='blue', marker='o', label=f'Función: {expresion_funcion}')
-
-            # Mostrar los puntos en el plano
-            plt.scatter(valores_x, valores_y, color='red', marker='o', label='Puntos de la función')
-
-            # Mostrar el gráfico
-            plt.grid(True)
-            plt.legend()
-            plt.show()
+            valores_y = [lambdify(x, expresion_funcion, 'numpy')(valor_x) for valor_x in valores_x]
+            
+            # Llamar a la función para guardar y mostrar la gráfica
+            guardar_grafica(expresion_funcion, valores_x, valores_y)
+        
                         
-
-
         elif eleccion == 12:
                 
             while True:

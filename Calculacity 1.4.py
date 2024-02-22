@@ -1262,4 +1262,3 @@ if __name__ == "__main__":
             print("Reto de matemáticas 2024")
             print("")
             print("*" * 80)
-            break

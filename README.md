@@ -27,7 +27,7 @@ Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro asesor 
 
 - Cambio total en el conversor de unidades, solo se podrán convertir unidades de metro a kilogramo y viceversa.
 - Se arregló el bug que no dejaba regresar al menú principal en el menú "Fórmulas".
-- Las representaciones de las funciones ahora se guardan en "Documents" y "Documnetos" (Para sistemas operativos que estén en español).
+- Las representaciones de las funciones ahora se guardan en "Documents" y "Documentos" (Para sistemas operativos que estén en español).
 - Arreglo en la representación gráfica de la división.
 - Se arregló el bug que permitía la conversión de 2 unidades iguales.
 - Se añadió el menú "Glosario" en donde el usuario encontrará 3 temas diversos de las materias Física y Matemáticas.

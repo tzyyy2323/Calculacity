@@ -1263,6 +1263,3 @@ if __name__ == "__main__":
             print("")
             print("*" * 80)
             break
-
-
-os.system('clear')

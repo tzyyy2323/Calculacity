@@ -1,6 +1,7 @@
 # Calculacity
 
-Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro tutor guía el profesor Ruben Leal.
+Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro asesor el profesor Ruben Leal
+
 ## Changelog
 
 **Version 1.0**
@@ -20,4 +21,13 @@ Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro tutor g
 
 **Versión 1.3**
 
-- Se añadió la capacidad de representar funciones en el plano cartesiano
+- Se añadió la capacidad de representar funciones en el plano cartesiano.
+
+**Version 1.4**
+
+- Cambio total en el conversor de unidades, solo se podrán convertir unidades de metro a kilogramo y viceversa.
+- Se arregló el bug que no dejaba regresar al menú principal en el menú "Fórmulas".
+- Las representaciones de las funciones ahora se guardan en "Documents" y "Documnetos" (Para sistemas operativos que estén en español).
+- Arreglo en la representación gráfica de la división.
+- Se arregló el bug que permitía la conversión de 2 unidades iguales.
+- Se añadió el menú "Glosario" en donde el usuario encontrará 3 temas diversos de las materias Física y Matemáticas.

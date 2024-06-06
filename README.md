@@ -1,6 +1,10 @@
 # Calculacity
 
-Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro asesor el profesor Ruben Leal
+Somos estudiantes de la Unidad Psicoeducativa "Julio Chevalier", estamos cursando el 4to Año de Educación Media General. Somos estudiantes que se preocupan por la accesibilidad de los recursos didácticos para los estudiantes y quisimos crear este proyecto y desarrollar esta calculadora enciclopedia digital para crear una ayuda práctica o apoyo para estudiantes y docentes.
+
+Nuestra visión para este proyecto de una calculadora inteligente digital educativa es crear una herramienta que revolucione la forma en que los estudiantes aprenden matemática y física. Queremos ofrecer una calculadora que no solo realice cálculos rápidos y precisos, sino que también proporcione información acerca de temas en específico sobre estas materias para ayudar a los usuarios a comprender los conceptos detrás de los problemas. Aspiramos a que nuestra calculadora se convierta en un recurso indispensable para estudiantes de todas las edades y niveles educativos, desde la escuela primaria hasta la universidad. Creemos que al combinar la tecnología avanzada con el aprendizaje interactivo, podemos empoderar a los estudiantes para que se conviertan en pensadores críticos y solucionadores de problemas más eficaces. Además, nuestra visión incluye la colaboración con educadores y expertos en el campo de la educación para asegurarnos de que nuestra calculadora cumpla con los estándares académicos y pedagógicos más altos. Queremos asegurarnos de que nuestra herramienta sea accesible para todos los estudiantes, independientemente de su nivel de habilidad o recursos disponibles.
+
+Nuestra visión es crear una calculadora inteligente digital educativa que inspire a los estudiantes a explorar, aprender y crecer en su comprensión de la matemática y física. Queremos ser líderes en la innovación educativa y contribuir al desarrollo de la próxima generación de pensadores creativos y competentes.
 
 ## Changelog
 

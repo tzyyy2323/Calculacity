@@ -31,3 +31,14 @@ Proyecto creado por Siugel Chong y Luis Diego Salas con ayuda de nuestro asesor 
 - Arreglo en la representación gráfica de la división.
 - Se arregló el bug que permitía la conversión de 2 unidades iguales.
 - Se añadió el menú "Glosario" en donde el usuario encontrará 3 temas diversos de las materias Física y Matemáticas.
+
+**Version 1.5**
+
+- Por problemas de variables y compatibilidad se eliminó la opción del conversor de unidades
+- Se añadió la posibilidad de calcular el seno y el coseno de un ángulo
+- Se añadió la posibilidad de calcular la tangente de un ángulo
+- Se añadió la posibilidad de calcular la magnitud de vectores
+
+**Versión 1.5.1**
+
+- Se corrigieron errores con la representación de puntos en el plano cartesiano

@@ -391,81 +391,48 @@ if __name__ == "__main__":
 
         elif eleccion == 12:
 
-            # Solicitar al usuario el número de vectores
             num_vectores = int(input("Ingrese el número de vectores: "))
 
-            # Inicializar una lista para almacenar los vectores
             vectores = []
 
-            # Solicitar las coordenadas de los vectores
             for i in range(num_vectores):
                 coordenadas = input(f"Ingrese las coordenadas del vector {i+1} (separadas por comas, por ejemplo, 'x,y'): ")
                 vector = [float(coord) for coord in coordenadas.split(",")]
                 vectores.append(vector)
 
-            # Calcular el módulo de cada vector con respecto al primer vector
             primer_vector = vectores[0]
             for i in range(1, num_vectores):
                 modulo = calcular_modulo_vector_2D(primer_vector, vectores[i])
                 print(f"El módulo del vector {i+1} es:", modulo)
 
-
         elif eleccion == 13:
             
             def guardar_grafica(expresion_funcion, valores_x, valores_y):
-                # Crear la función a partir de la expresión ingresada
                 try:
                     funcion = lambdify(x, expresion_funcion, 'numpy')
                 except Exception as e:
                     print(f"Error al crear la función: {e}")
                     return
-            
-                # Limpiar la figura antes de dibujar una nueva gráfica
                 plt.clf()
-            
-                # Dibujar el plano cartesiano con la función
                 plt.title('Plano Cartesiano con Función')
                 plt.xlabel('Eje X')
                 plt.ylabel('Eje Y')
-            
-                # Dibujar los ejes X e Y (la cruz)
                 plt.axhline(0, color='black', linewidth=2, linestyle='--')
                 plt.axvline(0, color='black', linewidth=2, linestyle='--')
-            
-                # Mostrar la función
                 plt.plot(valores_x, valores_y, color='blue', marker='o', label=f'Función: {expresion_funcion}')
-            
-                # Mostrar los puntos en el plano
                 plt.scatter(valores_x, valores_y, color='red', marker='o', label='Puntos de la función')
-            
-                # Mostrar el gráfico
                 plt.grid(True)
                 plt.legend()
             
-                # Obtener la ruta del directorio "Mis Documentos"
                 directorio_documentos = os.path.join(os.path.expanduser("~"), "Documents")
-            
-                # Generar un nombre único para el archivo .png
                 nombre_archivo = f'grafica_{expresion_funcion.replace(" ", "_").replace("/", "_").replace("*", "_")}.png'
                 archivo_salida = os.path.join(directorio_documentos, nombre_archivo)
-            
-                # Guardar la gráfica en el archivo .png
                 plt.savefig(archivo_salida)
-            
-                # Mostrar un mensaje de confirmación
                 print(f"La gráfica se ha guardado en {archivo_salida}")
-            
-            # Pedir al usuario que ingrese la función
             x = symbols('x')
             expresion_funcion = input("Ingresa la expresión de la función en términos de x: ")
-            
-            # Valores de x de la tabla
             valores_x = [-3, -2, -1, 0, 1, 2, 3]
-            
-            # Calcular los valores correspondientes de y utilizando la función ingresada
             valores_y = [lambdify(x, expresion_funcion, 'numpy')(valor_x) for valor_x in valores_x]
-            
-            # Llamar a la función para guardar y mostrar la gráfica
             guardar_grafica(expresion_funcion, valores_x, valores_y)
 
 
@@ -1134,11 +1101,5 @@ if __name__ == "__main__":
             print("*" * 80)
             print("")
             print("Programa creado por los estudiantes Siugel Chong y Luis Diego Salas")
-            print("")
-            print("Ruben Leal como nuestro asesor")
-            print("")
-            print("Unidad Psicoeducativa Julio Chevalier")
-            print("")
-            print("Reto de matemáticas 2024")
             print("")
             print("*" * 80)

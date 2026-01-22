@@ -45,4 +45,4 @@ Nuestra visión es crear una calculadora inteligente digital educativa que inspi
 
 **Versión 1.5.1**
 
-- Se corrigieron errores con la representación de puntos en el plano cartesiano
+- Se corrigieron errores en la representación de puntos en el plano cartesiano
